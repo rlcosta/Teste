@@ -15,6 +15,12 @@
 			'charset' => 'utf8'
 		));
 
+
+	 $configs->env->development->mail->setFrom(array(
+        'from' => 'Romulo',
+        'from_mail' => 'contato@arantius.16mb.com'
+    ));
+
 	$configs->env->development->auth->setURLs('/teste/home/','/teste/login/');
 
 /*
