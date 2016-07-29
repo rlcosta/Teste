@@ -69,6 +69,15 @@ class RecuperarController extends \HXPHP\System\Controller
 
 				$this->load('Services\Email');
 
+				var_dump($this->email->send(
+					$validar->user->email,
+					'HXPHP - '.$message['subject'],
+					$message['message'] . 'HXPHP',
+					array(
+						'email' => $this->configs->mail->from_mail,
+						'remetente' => $this->configs->mail->from
+					)));
+
 				$envioDoEmail = $this->email->send(
 					$validar->user->email,
 					'HXPHP - '.$message['subject'],
@@ -79,7 +88,7 @@ class RecuperarController extends \HXPHP\System\Controller
 					)
 				);
 
-				if($envioDoEmail == false){
+				if($envioDoEmail === false){
 					$error = $this->messages->getByCode('email-nao-enviado');
 				}
 			}

@@ -16,11 +16,6 @@
 		));
 
 
-	 $configs->env->development->mail->setFrom(array(
-        'from' => 'Romulo',
-        'from_mail' => 'contato@arantius.16mb.com'
-    ));
-
 	$configs->env->development->auth->setURLs('/teste/home/','/teste/login/');
 
 /*
@@ -28,7 +23,7 @@
 
 	$configs->env->production->baseURI = '/';
 
-	$configs->env->production->database->setConnectionData(array()
+	$configs->env->production->database->setConnectionData(array(
 			'driver' => 'mysql',
 			'host' => 'localhost',
 			'user' => '	u942981625_arant',

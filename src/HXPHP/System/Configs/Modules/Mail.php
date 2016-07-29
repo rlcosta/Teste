@@ -11,7 +11,7 @@ class Mail
 	{
 		$this->setFrom([
 			'from' => 'HXPHP Framework',
-			'from_mail' => 'no-reply@hxphp.com.br'
+			'from_mail' => 'contato@arantius.16mb.com'
 		]);
 		return $this;
 	}
